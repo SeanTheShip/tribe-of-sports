@@ -1,9 +1,8 @@
 <template>
-  <div>
+  <div class="back_color">
     <NavBar />
     <router-view></router-view>
   </div>
-  
 </template>
 
 <script>
@@ -24,5 +23,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.back_color {
+  height: 100vh;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="box" v-for="(b,i) in box" :key="i">
-            <div class="title">{{box[i].title}}</div>
+        <div class="box" v-for="(b,i) in box" :key="i" @click="box[i].link">
+            <div class="title" >{{box[i].title}}</div>
         </div>
     </div>
 </template>
@@ -13,18 +13,23 @@ export default {
     data(){
         return{
             box: [{
-            title: '등록',
-
+                title: '등록',
+                link: () => {
+                    this.$router.push('/register/nogym')
+                }
             },
             {
-            title: '관리',
-
+                title: '관리',
+                link: () => {
+                    this.$router.push('/register/nogym')
+                }
             },
             {
-            title: '대시보드',
-
-            },
-            ],
+                title: '대시보드',
+                link: () => {
+                    this.$router.push('/register/nogym')
+                }
+            }],
         }
     }
 }

@@ -10,7 +10,7 @@
                 <input class="textbox" :placeholder="[[items[i].PH]]">
                 <!-- <p>{{여기에 오류상황 설명}}</p> -->
             </div>
-            <button type="button" class="btn btn-success register" @click="$router.push('/signin')">등록하기</button>
+            <button type="button" class="register btn btn-success " @click="$router.push('/signin')">등록하기</button>
         </div>
     </div>
 </template>
@@ -60,7 +60,7 @@ export default {
         height: 500px;
         width: 500px;
         margin: auto;
-        margin-top: 20%;
+        margin-top: 10%;
     }
     .in1{
         float: right;
@@ -77,6 +77,7 @@ export default {
 
     input.textbox{
         width: 250px;
+        border-radius: 20px;
     }
 
     button.register{
