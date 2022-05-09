@@ -1,17 +1,49 @@
 <template>
-    <div>
-        <div class="signup-box">
-            <div class="in1">
-                이름 :
-                <input class="textbox" @input="Name" placeholder="이름을 입력하세요">
+    <div class="signup">
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">name</label>
+                <input type="email" class="form-control" id="inputEmail4">
             </div>
-            <div class="in" v-for="(box,i) in items" :key="i">
-                {{items[i].Name}} : 
-                <input class="textbox" :placeholder="[[items[i].PH]]">
-                <!-- <p>{{여기에 오류상황 설명}}</p> -->
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">host_name</label>
+                <input type="password" class="form-control" id="inputPassword4">
             </div>
-            <button type="button" class="register btn btn-success " @click="$router.push('/signin')">등록하기</button>
-        </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">id</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">pw</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">phone</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">location</label>
+                <select id="inputState" class="form-select">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">registration</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        large, small, event
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </form>
     </div>
 </template>
 
@@ -25,19 +57,9 @@ export default {
             Name: '',
             items: [
             {
-                Name: '번호',
-                PH: '번호를 입력하세요',
-                // Model: number,
-            },
-            {
-                Name: '아이디',
-                PH: '아이디를 입력하세요',
-                // Model: id,
-            },
-            {
                 Name: '비밀번호',
-                PH: '비밀번호를 입력하세요'
-                // Model: password,
+                PH: '비밀번호를 입력하세요',
+                // Model: number,
             },
             {
                 Name: '비밀번호 재입력',
@@ -45,10 +67,37 @@ export default {
                 // Model: re,
             },
             {
+                Name: '이름',
+                PH: '이름을 입력하세요',
+                // Model: id,
+            },
+            {
+                Name: '체육관 이름',
+                PH: '체육관 이름을 입력하세요'
+                // Model: password,
+            },
+            {
+                Name: '전화번호',
+                PH: '전화번호를 입력하세요'
+                // Model: email,
+            },
+            {
+                Name: '사업자 등록번호',
+                PH: '사업자 등록번호를 입력하세요'
+                // 전페이지에서 가져오기
+            },
+            {
                 Name: '이메일',
                 PH: '이메일 주소를 입력하세요'
                 // Model: email,
-            }],
+            },
+            {
+                Name: '주소',
+                PH: '주소를 입력하세요'
+                // Model: re,
+            },
+            //종목, 시, 구
+            ],
         }
     }
 }

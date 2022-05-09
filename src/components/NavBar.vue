@@ -9,12 +9,14 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav"> -->
-            <div>
-                <button class="btn btn-sm btn-outline-primary " type="button" @click="$router.push('/signin')">로그인</button>
-                <button class="btn btn-sm btn-outline-success " type="button" @click="$router.push('/signup')">회원가입</button>
+            <div> <!--v-if="로그인 정보가 없을경우"-->
+                <button class="btn btn-sm btn-outline-primary me-3" type="button" @click="$router.push('/signin')">로그인</button>
+                <button class="btn btn-sm btn-outline-success " type="button" @click="$router.push('/signup/registration')">회원가입</button>
             </div>
             
-            <!-- </div> -->
+            <!--<div v-else="로그인 했을 경우">
+                <a>이름</a>
+            </div> -->
         </div>
     </nav>
 </template>
@@ -31,4 +33,5 @@ export default {
         color: white;
     }
 
+    
 </style>

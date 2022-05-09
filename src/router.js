@@ -2,7 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import mainpage from './pages/mainpage.vue';
 import login from './pages/Signin.vue';
 import sign from './pages/Signup.vue';
-import nogym from './pages/nogym.vue';
+import registration from './pages/registration.vue';
 
 const routes = [
     {
@@ -14,12 +14,12 @@ const routes = [
         component: login,
     },
     {
-        path: "/signup",
+        path: "/signup/checked",
         component: sign,
     },
     {
-        path: "/register/nogym",
-        component: nogym,
+        path: "/signup/registration",
+        component: registration,
     },
 ];
 

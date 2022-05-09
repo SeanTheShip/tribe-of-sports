@@ -35,7 +35,7 @@ export default {
         width: 500px;
         margin: auto;
         margin-top: 10%;
-        background-color: wheat;
+        /* background-color: wheat; */
     }
 
     .id {

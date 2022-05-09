@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="box" v-for="(b,i) in box" :key="i" @click="box[i].link">
-            <div class="title" >{{box[i].title}}</div>
+        <div class="box" @click="$router.push('/signin')">
+            <div class="title" >로그인</div>
         </div>
     </div>
 </template>
@@ -12,24 +12,7 @@ export default {
 
     data(){
         return{
-            box: [{
-                title: '등록',
-                link: () => {
-                    this.$router.push('/register/nogym')
-                }
-            },
-            {
-                title: '관리',
-                link: () => {
-                    this.$router.push('/register/nogym')
-                }
-            },
-            {
-                title: '대시보드',
-                link: () => {
-                    this.$router.push('/register/nogym')
-                }
-            }],
+            
         }
     }
 }
@@ -37,12 +20,12 @@ export default {
 
 <style>
     .box{
-        margin: 5%;
+        margin: auto;
+        margin-top: 10%;
         border: 1px solid black;
         height: 300px;
         width: 20%;
         background-color: ivory;
-        float: left;
     }
 
     .title{
